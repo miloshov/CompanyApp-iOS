@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lhH-m6-RDK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,496 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NKW-7R-BQl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="5yD-Rb-ZO2"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vne-5o-9qd">
+                                <rect key="frame" x="0.0" y="324" width="375" height="299"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="868-tV-V7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz6-kq-aVz">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="149.5"/>
+                                                <color key="backgroundColor" red="0.022786419395593685" green="0.67697097081218272" blue="0.45772937222778992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="About Us"/>
+                                                <connections>
+                                                    <action selector="aboutUsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5Q-ba-5v7"/>
+                                                    <segue destination="beU-DI-iPh" kind="show" id="NiE-4t-Tyx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-l1-7OX">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="149.5"/>
+                                                <color key="backgroundColor" red="0.022786419395593685" green="0.67697097081218272" blue="0.45772937222778992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="News"/>
+                                                <connections>
+                                                    <action selector="newsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbI-ff-guy"/>
+                                                    <segue destination="oDO-k4-V9m" kind="show" id="f8n-b8-rQJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-ge-IBb">
+                                        <rect key="frame" x="0.0" y="149.5" width="375" height="149.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-te-nmV">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="149.5"/>
+                                                <color key="backgroundColor" red="0.022786419395593685" green="0.67697097081218272" blue="0.45772937222778992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Our Work"/>
+                                                <connections>
+                                                    <action selector="ourWorkBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="We6-Sz-S36"/>
+                                                    <segue destination="54K-jC-Ecn" kind="show" id="feL-jb-G10"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23c-gZ-Kky">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="149.5"/>
+                                                <color key="backgroundColor" red="0.022786419395593685" green="0.67697097081218272" blue="0.45772937222778992" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Contact"/>
+                                                <connections>
+                                                    <action selector="contactBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xI-G8-IFp"/>
+                                                    <segue destination="nSx-mD-ikF" kind="show" id="ApV-pu-2JZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NKW-7R-BQl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="88B-y9-1vK"/>
+                            <constraint firstItem="Vne-5o-9qd" firstAttribute="top" secondItem="NKW-7R-BQl" secondAttribute="bottom" id="DfM-dm-PgM"/>
+                            <constraint firstAttribute="trailing" secondItem="NKW-7R-BQl" secondAttribute="trailing" id="EvA-vf-n5C"/>
+                            <constraint firstItem="NKW-7R-BQl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IDf-Pc-2MJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Vne-5o-9qd" secondAttribute="trailing" id="Yg8-Y3-T0S"/>
+                            <constraint firstItem="Vne-5o-9qd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fgY-L0-Dhc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vne-5o-9qd" secondAttribute="bottom" id="tEr-Kl-SUc"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Main Screen" id="uix-51-q3d"/>
+                    <connections>
+                        <outlet property="mainScreenImage" destination="NKW-7R-BQl" id="r4k-kD-So7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="142.57871064467767"/>
+        </scene>
+        <!--NewsTVC-->
+        <scene sceneID="A06-9s-tBj">
+            <objects>
+                <tableViewController id="oDO-k4-V9m" customClass="NewsTVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="HOH-an-wjj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="90" id="eRK-9u-Jnc" customClass="NewsCell" customModule="CompanyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eRK-9u-Jnc" id="BSU-Ej-O7q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-pu-DqD">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="89.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="L3d-ws-EAo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Il-j3-NGN">
+                                            <rect key="frame" x="168" y="0.0" width="199" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="CgB-A9-PdF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k25-9u-FyT">
+                                            <rect key="frame" x="168" y="30" width="191" height="51.5"/>
+                                            <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aPm-pu-DqD" firstAttribute="top" secondItem="BSU-Ej-O7q" secondAttribute="top" id="2TN-ch-7B2"/>
+                                        <constraint firstItem="8Il-j3-NGN" firstAttribute="leading" secondItem="aPm-pu-DqD" secondAttribute="trailing" constant="8" id="2xg-X5-UBc"/>
+                                        <constraint firstItem="aPm-pu-DqD" firstAttribute="leading" secondItem="BSU-Ej-O7q" secondAttribute="leading" id="9E9-Ph-pnO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="k25-9u-FyT" secondAttribute="trailing" constant="8" id="AYD-UV-GTY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="k25-9u-FyT" secondAttribute="bottom" id="QLt-aH-Hrg"/>
+                                        <constraint firstAttribute="bottom" secondItem="aPm-pu-DqD" secondAttribute="bottom" id="YGo-o9-fTn"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Il-j3-NGN" secondAttribute="trailing" constant="8" id="ZPJ-ha-GKu"/>
+                                        <constraint firstItem="8Il-j3-NGN" firstAttribute="top" secondItem="BSU-Ej-O7q" secondAttribute="top" id="jTe-hf-19T"/>
+                                        <constraint firstItem="k25-9u-FyT" firstAttribute="leading" secondItem="aPm-pu-DqD" secondAttribute="trailing" constant="8" id="vJv-ne-JhC"/>
+                                        <constraint firstItem="k25-9u-FyT" firstAttribute="top" secondItem="8Il-j3-NGN" secondAttribute="bottom" id="wry-DQ-CPi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsImageView" destination="aPm-pu-DqD" id="Cdh-F3-fNT"/>
+                                    <outlet property="newsSubtitleLbl" destination="k25-9u-FyT" id="QXC-Rm-pe8"/>
+                                    <outlet property="newsTitleLbl" destination="8Il-j3-NGN" id="dvd-dR-hmp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oDO-k4-V9m" id="cy3-7Z-XSh"/>
+                            <outlet property="delegate" destination="oDO-k4-V9m" id="emH-4z-eLs"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Rxz-Hq-95D" kind="show" identifier="toNewsDetailsVC" id="DbQ-Ki-0VP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eM8-fN-Fqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="-167"/>
+        </scene>
+        <!--Our WorkTVC-->
+        <scene sceneID="s8d-kD-7e9">
+            <objects>
+                <tableViewController id="54K-jC-Ecn" customClass="OurWorkTVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Rd-JI-A9M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OurWorkCell" rowHeight="90" id="8yH-cX-el4" customClass="OurWorkCell" customModule="CompanyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yH-cX-el4" id="fBs-YJ-zga">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rPj-aE-yD1">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="89.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="Sk1-ro-AMk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q00-94-c9D">
+                                            <rect key="frame" x="168" y="-0.5" width="199" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Oxw-Ds-YfT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ict-U6-sgs">
+                                            <rect key="frame" x="168" y="29.5" width="191" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51.5" id="8oT-JM-AO9"/>
+                                                <constraint firstAttribute="width" constant="191" id="csA-ae-oqb"/>
+                                            </constraints>
+                                            <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="q00-94-c9D" firstAttribute="leading" secondItem="rPj-aE-yD1" secondAttribute="trailing" constant="8" id="5bI-bT-QdF"/>
+                                        <constraint firstItem="Ict-U6-sgs" firstAttribute="bottom" secondItem="fBs-YJ-zga" secondAttribute="bottomMargin" id="861-77-RBk"/>
+                                        <constraint firstAttribute="trailing" secondItem="q00-94-c9D" secondAttribute="trailing" constant="8" id="8Qs-dU-o9y"/>
+                                        <constraint firstAttribute="bottom" secondItem="rPj-aE-yD1" secondAttribute="bottom" id="AaX-4K-7nV"/>
+                                        <constraint firstItem="Ict-U6-sgs" firstAttribute="leading" secondItem="rPj-aE-yD1" secondAttribute="trailing" constant="8" id="HhB-vG-uqb"/>
+                                        <constraint firstItem="rPj-aE-yD1" firstAttribute="top" secondItem="fBs-YJ-zga" secondAttribute="top" id="UD1-P6-s2C"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ict-U6-sgs" secondAttribute="trailing" constant="8" id="cSu-DV-A8V"/>
+                                        <constraint firstItem="Ict-U6-sgs" firstAttribute="top" secondItem="q00-94-c9D" secondAttribute="bottom" id="sI8-V9-uyk"/>
+                                        <constraint firstItem="rPj-aE-yD1" firstAttribute="leading" secondItem="fBs-YJ-zga" secondAttribute="leading" id="wOu-E5-hw2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ourWorkImage" destination="rPj-aE-yD1" id="wqH-9f-sZH"/>
+                                    <outlet property="ourWorkSubtitleLbl" destination="Ict-U6-sgs" id="4Rx-4k-Q8k"/>
+                                    <outlet property="ourWorkTitleLbl" destination="q00-94-c9D" id="0ug-xe-6Ep"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="54K-jC-Ecn" id="FSb-1e-Gvf"/>
+                            <outlet property="delegate" destination="54K-jC-Ecn" id="oYB-cm-6ww"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Mmo-PB-1IL" kind="show" identifier="toOurWorkDetailsVC" id="1He-MT-Cou"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICh-vl-1rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981.5999999999999" y="506.89655172413796"/>
+        </scene>
+        <!--Our Work DetailsVC-->
+        <scene sceneID="1RW-A7-xk4">
+            <objects>
+                <viewController id="Mmo-PB-1IL" customClass="OurWorkDetailsVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5dj-RM-DaU"/>
+                        <viewControllerLayoutGuide type="bottom" id="DUG-Ic-9hN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZHi-IE-c1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNN-k1-OY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="507"/>
+        </scene>
+        <!--News DetailsVC-->
+        <scene sceneID="ToV-qh-5jn">
+            <objects>
+                <viewController id="Rxz-Hq-95D" customClass="NewsDetailsVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6VL-jV-jrZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lah-VM-ZFG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KpN-gk-D8O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoN-KB-482">
+                                <rect key="frame" x="0.0" y="284" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Uuj-X3-zIe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Company#1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="h0Y-Vo-KGI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="xcB-Mw-Zle"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-5U-hbw">
+                                <rect key="frame" x="8" y="332" width="359" height="283"/>
+                                <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lah-VM-ZFG" firstAttribute="top" secondItem="OaF-5U-hbw" secondAttribute="bottom" constant="8" id="0vp-v5-LOd"/>
+                            <constraint firstItem="h0Y-Vo-KGI" firstAttribute="top" secondItem="6VL-jV-jrZ" secondAttribute="bottom" id="5YF-Jf-tIm"/>
+                            <constraint firstAttribute="trailing" secondItem="PoN-KB-482" secondAttribute="trailing" id="K3p-op-D2I"/>
+                            <constraint firstAttribute="trailing" secondItem="OaF-5U-hbw" secondAttribute="trailing" constant="8" id="TII-EJ-Ped"/>
+                            <constraint firstItem="PoN-KB-482" firstAttribute="top" secondItem="h0Y-Vo-KGI" secondAttribute="bottom" id="cQz-rN-kS4"/>
+                            <constraint firstItem="OaF-5U-hbw" firstAttribute="top" secondItem="PoN-KB-482" secondAttribute="bottom" constant="8" id="fgy-Hb-MM8"/>
+                            <constraint firstAttribute="trailing" secondItem="h0Y-Vo-KGI" secondAttribute="trailing" id="q3h-sy-Ea7"/>
+                            <constraint firstItem="PoN-KB-482" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="w5a-DB-yKF"/>
+                            <constraint firstItem="OaF-5U-hbw" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" constant="8" id="zLW-Fr-640"/>
+                            <constraint firstItem="h0Y-Vo-KGI" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="zZM-dx-lBu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtH-Vj-ZjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2737" y="-168"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="69Y-dD-doL">
+            <objects>
+                <viewController id="nSx-mD-ikF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahc-AI-LbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="UtI-RX-Vyu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k44-Jc-z80">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjv-9P-U8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="1265"/>
+        </scene>
+        <!--About UsTVC-->
+        <scene sceneID="7Cl-qT-bY1">
+            <objects>
+                <tableViewController id="beU-DI-iPh" customClass="AboutUsTVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="i0l-OA-ZrG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="25"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutUsCell" rowHeight="150" id="5X1-va-1aP" customClass="AboutUsCell" customModule="CompanyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5X1-va-1aP" id="3ZE-27-Ciy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RrD-GF-cmo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPF-J6-sKo">
+                                            <rect key="frame" x="125" y="99.5" width="250" height="30"/>
+                                            <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="250" id="J1D-9R-F40"/>
+                                                <constraint firstAttribute="height" constant="30" id="tFu-pm-XHF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdi-tP-pUU">
+                                            <rect key="frame" x="125" y="129.5" width="250" height="20"/>
+                                            <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="250" id="Ezu-Ky-R6K"/>
+                                                <constraint firstAttribute="height" constant="20" id="S7D-D5-oXy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="RrD-GF-cmo" firstAttribute="top" secondItem="3ZE-27-Ciy" secondAttribute="top" id="JER-ek-PXe"/>
+                                        <constraint firstItem="RrD-GF-cmo" firstAttribute="leading" secondItem="3ZE-27-Ciy" secondAttribute="leading" id="KuM-WY-YQL"/>
+                                        <constraint firstAttribute="trailing" secondItem="RrD-GF-cmo" secondAttribute="trailing" id="MBD-Tr-r79"/>
+                                        <constraint firstAttribute="bottom" secondItem="RrD-GF-cmo" secondAttribute="bottom" id="MmO-3J-QVP"/>
+                                        <constraint firstAttribute="bottom" secondItem="Bdi-tP-pUU" secondAttribute="bottom" id="Woq-G6-jXV"/>
+                                        <constraint firstAttribute="trailing" secondItem="OPF-J6-sKo" secondAttribute="trailing" id="YdH-Tp-Tnp"/>
+                                        <constraint firstAttribute="bottom" secondItem="OPF-J6-sKo" secondAttribute="bottom" constant="20" id="hk0-9t-6Xi"/>
+                                        <constraint firstAttribute="trailing" secondItem="Bdi-tP-pUU" secondAttribute="trailing" id="kaD-VB-hIT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="aboutUsImage" destination="RrD-GF-cmo" id="eyJ-bY-WGk"/>
+                                    <outlet property="aboutUsSubtitleLbl" destination="Bdi-tP-pUU" id="egp-0f-r5H"/>
+                                    <outlet property="aboutUsTitleLbl" destination="OPF-J6-sKo" id="PWT-DK-jst"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="beU-DI-iPh" id="kO7-oP-DzW"/>
+                            <outlet property="delegate" destination="beU-DI-iPh" id="1GC-Pz-25K"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="IRd-Nk-dqU" kind="show" identifier="toAboutUsDetailsVC" id="iaQ-C7-eJC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUa-Y2-UbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="-888"/>
+        </scene>
+        <!--About Us DetailsVC-->
+        <scene sceneID="pd4-s8-C1m">
+            <objects>
+                <viewController id="IRd-Nk-dqU" customClass="AboutUsDetailsVC" customModule="CompanyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NBg-TY-I2E"/>
+                        <viewControllerLayoutGuide type="bottom" id="7fn-eq-a4t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Lb-et-OKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Company#1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Xhc-Nb-riI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="6ln-Ox-P1H"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF8-ax-7Gt">
+                                <rect key="frame" x="0.0" y="284" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UV4-k8-VeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1u-Jn-KCD">
+                                <rect key="frame" x="8" y="332" width="359" height="283"/>
+                                <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uF8-ax-7Gt" secondAttribute="trailing" id="15K-en-GpB"/>
+                            <constraint firstItem="Xhc-Nb-riI" firstAttribute="leading" secondItem="1Lb-et-OKl" secondAttribute="leading" id="HZY-Nv-T1A"/>
+                            <constraint firstItem="Y1u-Jn-KCD" firstAttribute="top" secondItem="uF8-ax-7Gt" secondAttribute="bottom" constant="8" id="KaQ-bo-gmw"/>
+                            <constraint firstItem="Xhc-Nb-riI" firstAttribute="top" secondItem="NBg-TY-I2E" secondAttribute="bottom" id="YH2-r1-Qzg"/>
+                            <constraint firstItem="uF8-ax-7Gt" firstAttribute="top" secondItem="Xhc-Nb-riI" secondAttribute="bottom" id="d6E-to-i9i"/>
+                            <constraint firstAttribute="trailing" secondItem="Y1u-Jn-KCD" secondAttribute="trailing" constant="8" id="ilW-oi-e6R"/>
+                            <constraint firstItem="Y1u-Jn-KCD" firstAttribute="leading" secondItem="1Lb-et-OKl" secondAttribute="leading" constant="8" id="ity-m7-maF"/>
+                            <constraint firstItem="uF8-ax-7Gt" firstAttribute="leading" secondItem="1Lb-et-OKl" secondAttribute="leading" id="lqf-qj-asb"/>
+                            <constraint firstAttribute="trailing" secondItem="Xhc-Nb-riI" secondAttribute="trailing" id="m08-xV-6F5"/>
+                            <constraint firstItem="7fn-eq-a4t" firstAttribute="top" secondItem="Y1u-Jn-KCD" secondAttribute="bottom" constant="8" id="nEN-Uk-IKe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsImageView" destination="Xhc-Nb-riI" id="FFp-xh-LbR"/>
+                        <outlet property="detailsSubtitileLbl" destination="Y1u-Jn-KCD" id="Kkg-M7-rlq"/>
+                        <outlet property="detailsTitleLbl" destination="uF8-ax-7Gt" id="Y0b-5b-DZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDO-KA-W13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2736.5" y="-889.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4ck-c2-ERf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="lhH-m6-RDK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="evt-of-ExL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OrT-Bl-4K3">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GGv-Mi-5eR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbr-ag-UBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="143.47826086956522"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Company#1.jpg" width="960" height="640"/>
+        <image name="LaunchImage.jpg" width="800" height="556"/>
+    </resources>
 </document>

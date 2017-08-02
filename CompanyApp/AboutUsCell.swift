@@ -9,7 +9,14 @@
 import UIKit
 
 class AboutUsCell: UITableViewCell {
+    
+    // MARK: Properties
 
+    @IBOutlet weak var aboutUsImage: UIImageView!
+    @IBOutlet weak var aboutUsTitleLbl: UILabel!
+    @IBOutlet weak var aboutUsSubtitleLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

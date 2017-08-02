@@ -9,27 +9,39 @@
 import UIKit
 
 class AboutUsDetailsVC: UIViewController {
+    
+    // MARK: Properties
+    
+    var _aboutUs: AboutUsFile!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var detailsImageView: UIImageView!
+    @IBOutlet weak var detailsTitleLbl: UILabel!
+    @IBOutlet weak var detailsSubtitileLbl: UILabel!
+    
+    var detailsAboutUs: AboutUsFile {
+        
+        get {
+            
+            return _aboutUs
+            
+        } set {
+            
+            _aboutUs = newValue
+            
+        }
+        
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // This does not work. Dont know why...
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        detailsImageView.image = detailsAboutUs.photo
+        detailsTitleLbl.text = detailsAboutUs.title
+        detailsSubtitileLbl.text = detailsAboutUs.subtitle
+        
     }
-    */
+
 
 }

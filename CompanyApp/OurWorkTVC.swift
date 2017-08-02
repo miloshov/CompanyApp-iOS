@@ -9,15 +9,18 @@
 import UIKit
 
 class OurWorkTVC: UITableViewController {
-
+    
+    //MARK: Properties
+    
+    var allOurWork = [AboutUsFile]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadDataTest()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +31,39 @@ class OurWorkTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+       
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+        return allOurWork.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let ourWorkCellIdentifier = "OurWorkCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ourWorkCellIdentifier, for: indexPath) as? OurWorkCell else {
+            
+            fatalError("Reusable cell is not configured properlly")
+        }
+        
+        let ourWork = allOurWork[indexPath.row]
+        
+        cell.ourWorkImage.image = ourWork.photo
+        cell.ourWorkTitleLbl.text = ourWork.title
+        cell.ourWorkSubtitleLbl.text = ourWork.subtitle
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let thisIsOurWork = allOurWork[indexPath.row]
+        
+        performSegue(withIdentifier: "toOurWorkDetailsVC", sender: thisIsOurWork)
+        
     }
 
     /*
@@ -91,5 +120,60 @@ class OurWorkTVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    private func loadDataTest () {
+        
+        let photoImage1 = UIImage(named: "Company#2.jpg")
+        let photoImage2 = UIImage(named: "Company#3.jpg")
+        let photoImage3 = UIImage(named: "Company#4.jpg")
+        let photoImage4 = UIImage(named: "Company#5.jpg")
+        let photoImage5 = UIImage(named: "Company#6.jpg")
+        let photoImage6 = UIImage(named: "Company#7.jpg")
+        let photoImage7 = UIImage(named: "Company#8.jpg")
+        let photoImage8 = UIImage(named: "Company#9.jpg")
+        let photoImage9 = UIImage(named: "Company#10.jpg")
+        
+        
+        
+        
+        
+        guard let testOurWork1 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage1, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork2 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage2, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork3 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage3, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork4 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage4, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork5 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage5, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork6 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage6, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork7 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage7, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork8 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage8, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        guard let testOurWork9 = AboutUsFile(title: "WeatherApp Relesed Today", photo: photoImage9, subtitle: "In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data ") else {
+            fatalError("Test data was not loaded successfully")
+        }
+        
+        allOurWork += [testOurWork1, testOurWork2, testOurWork3, testOurWork4, testOurWork5, testOurWork6, testOurWork7, testOurWork8, testOurWork9]
+        
+    }
 }

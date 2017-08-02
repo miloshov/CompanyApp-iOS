@@ -9,6 +9,12 @@
 import UIKit
 
 class OurWorkCell: UITableViewCell {
+    
+    //MARK:Properties
+    
+    @IBOutlet weak var ourWorkImage: UIImageView!
+    @IBOutlet weak var ourWorkTitleLbl: UILabel!
+    @IBOutlet weak var ourWorkSubtitleLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

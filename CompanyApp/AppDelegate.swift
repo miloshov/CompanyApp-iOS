@@ -7,15 +7,41 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // MARK: Custume function for managing notification type and iOS version support
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        if #available(iOS 8.0, *) {
+            
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        } else {
+            
+            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
+            application.registerForRemoteNotifications(matching: types)
+            
+        }
+        
+        // MARK: Firebase App initiated
+        
+        FirebaseApp.configure()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        
+        Thread.sleep(forTimeInterval: 2) // Launch screen manual running time
+        
         return true
     }
 
@@ -25,8 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+      
+        Messaging.messaging().shouldEstablishDirectChannel = false
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -34,11 +61,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+        connectToFCM()
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: custume functions for connectiong to FCM and Token Refresh (PushNotifications with Firebase)
+    
+    func tokenRefreshNotification(notification: NSNotification) {
+        
+        let refreshedToken = InstanceID.instanceID().token()
+        
+        print("InstanceID token: \(String(describing: refreshedToken))")
+        
+        connectToFCM()
+        
+    }
+    
+    func connectToFCM () {
+        
+        Messaging.messaging().shouldEstablishDirectChannel = true
+        
     }
 
 
