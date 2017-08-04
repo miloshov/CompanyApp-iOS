@@ -21,12 +21,11 @@ class ContactVC: UIViewController {
         
     }
     
-
-    @IBAction func SendQuestionBtnPressed(_ sender: UIButton) {
+    @IBAction func AskUsBtnPressed(_ sender: UIButton) {
         
         performSegue(withIdentifier: "toSendQuestionVC", sender: ContactVC())
-        }
-    
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

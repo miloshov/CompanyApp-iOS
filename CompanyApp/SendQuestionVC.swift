@@ -11,13 +11,13 @@ import UIKit
 class SendQuestionVC: UIViewController {
     
 
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
     
     @IBAction func SendBtnPressed(_ sender: UIButton) {
         
-        if firstNameTextField.hasText && lastNameTextField.hasText && questionTextView.hasText{
+        if fullNameTextField.hasText && emailTextField.hasText && questionTextView.hasText{
 
             SuccessfullAlert()
             

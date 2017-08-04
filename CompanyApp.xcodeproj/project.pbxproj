@@ -13,7 +13,7 @@
 		261E397C1F2337B3005DAC6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261E397B1F2337B3005DAC6F /* Assets.xcassets */; };
 		261E397F1F2337B3005DAC6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261E397D1F2337B3005DAC6F /* LaunchScreen.storyboard */; };
 		265048D01F236B81008F47D5 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265048CF1F236B81008F47D5 /* AboutUsCell.swift */; };
-		265048D21F236BCD008F47D5 /* AboutUsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265048D11F236BCD008F47D5 /* AboutUsTVC.swift */; };
+		265048D21F236BCD008F47D5 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265048D11F236BCD008F47D5 /* AboutUsVC.swift */; };
 		265048D41F236C1F008F47D5 /* AboutUsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265048D31F236C1F008F47D5 /* AboutUsFile.swift */; };
 		265048D61F24CE0F008F47D5 /* AboutUsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265048D51F24CE0F008F47D5 /* AboutUsDetailsVC.swift */; };
 		26595DA81F25D19E0031A0BC /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26595DA71F25D19E0031A0BC /* NewsCell.swift */; };
@@ -24,6 +24,8 @@
 		26595DB21F2628F40031A0BC /* OurWorkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26595DB11F2628F40031A0BC /* OurWorkDetailsVC.swift */; };
 		26767EA91F23460400F0C013 /* CallUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26767EA81F23460400F0C013 /* CallUs.swift */; };
 		26767EAB1F234A5500F0C013 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */; };
+		26C623781F349A9C007C9427 /* TestLogo#1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C623761F349A9C007C9427 /* TestLogo#1.png */; };
+		26C623791F349A9C007C9427 /* TestMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C623771F349A9C007C9427 /* TestMap.png */; };
 		26CD76691F33577100ECE530 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD76681F33577100ECE530 /* ContactVC.swift */; };
 		26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */; };
 		6EBC0B5DA0DCB4558813BD97 /* Pods_CompanyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D93E16905500D2AFF4EDD2 /* Pods_CompanyApp.framework */; };
@@ -39,7 +41,7 @@
 		261E397E1F2337B3005DAC6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		261E39801F2337B3005DAC6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265048CF1F236B81008F47D5 /* AboutUsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
-		265048D11F236BCD008F47D5 /* AboutUsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsTVC.swift; sourceTree = "<group>"; };
+		265048D11F236BCD008F47D5 /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		265048D31F236C1F008F47D5 /* AboutUsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsFile.swift; sourceTree = "<group>"; };
 		265048D51F24CE0F008F47D5 /* AboutUsDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsDetailsVC.swift; sourceTree = "<group>"; };
 		26595DA71F25D19E0031A0BC /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		26595DB11F2628F40031A0BC /* OurWorkDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurWorkDetailsVC.swift; sourceTree = "<group>"; };
 		26767EA81F23460400F0C013 /* CallUs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallUs.swift; sourceTree = "<group>"; };
 		26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		26C623761F349A9C007C9427 /* TestLogo#1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TestLogo#1.png"; sourceTree = "<group>"; };
+		26C623771F349A9C007C9427 /* TestMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestMap.png; sourceTree = "<group>"; };
 		26CD76681F33577100ECE530 /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendQuestionVC.swift; sourceTree = "<group>"; };
 		26FB7BFE1F31F7E1001BE22C /* CompanyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CompanyApp.entitlements; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 		261E39881F2337FE005DAC6F /* Resaurces */ = {
 			isa = PBXGroup;
 			children = (
+				26C623761F349A9C007C9427 /* TestLogo#1.png */,
+				26C623771F349A9C007C9427 /* TestMap.png */,
 			);
 			name = Resaurces;
 			sourceTree = "<group>";
@@ -143,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				261E39761F2337B3005DAC6F /* MainVC.swift */,
-				265048D11F236BCD008F47D5 /* AboutUsTVC.swift */,
+				265048D11F236BCD008F47D5 /* AboutUsVC.swift */,
 				265048D51F24CE0F008F47D5 /* AboutUsDetailsVC.swift */,
 				26595DA91F25D1DB0031A0BC /* NewsTVC.swift */,
 				26595DAB1F25D8E20031A0BC /* NewsDetailsVC.swift */,
@@ -240,8 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C623791F349A9C007C9427 /* TestMap.png in Resources */,
 				261E397F1F2337B3005DAC6F /* LaunchScreen.storyboard in Resources */,
 				26767EAB1F234A5500F0C013 /* GoogleService-Info.plist in Resources */,
+				26C623781F349A9C007C9427 /* TestLogo#1.png in Resources */,
 				261E397C1F2337B3005DAC6F /* Assets.xcassets in Resources */,
 				261E397A1F2337B3005DAC6F /* Main.storyboard in Resources */,
 			);
@@ -306,7 +314,7 @@
 				261E39771F2337B3005DAC6F /* MainVC.swift in Sources */,
 				26595DAA1F25D1DB0031A0BC /* NewsTVC.swift in Sources */,
 				26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */,
-				265048D21F236BCD008F47D5 /* AboutUsTVC.swift in Sources */,
+				265048D21F236BCD008F47D5 /* AboutUsVC.swift in Sources */,
 				26595DAE1F2619DD0031A0BC /* OurWorkTVC.swift in Sources */,
 				26CD76691F33577100ECE530 /* ContactVC.swift in Sources */,
 				261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */,
