@@ -24,6 +24,8 @@
 		26595DB21F2628F40031A0BC /* OurWorkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26595DB11F2628F40031A0BC /* OurWorkDetailsVC.swift */; };
 		26767EA91F23460400F0C013 /* CallUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26767EA81F23460400F0C013 /* CallUs.swift */; };
 		26767EAB1F234A5500F0C013 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */; };
+		26CD76691F33577100ECE530 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD76681F33577100ECE530 /* ContactVC.swift */; };
+		26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */; };
 		6EBC0B5DA0DCB4558813BD97 /* Pods_CompanyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D93E16905500D2AFF4EDD2 /* Pods_CompanyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		26595DB11F2628F40031A0BC /* OurWorkDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurWorkDetailsVC.swift; sourceTree = "<group>"; };
 		26767EA81F23460400F0C013 /* CallUs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallUs.swift; sourceTree = "<group>"; };
 		26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		26CD76681F33577100ECE530 /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendQuestionVC.swift; sourceTree = "<group>"; };
 		26FB7BFE1F31F7E1001BE22C /* CompanyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CompanyApp.entitlements; sourceTree = "<group>"; };
 		4277EFB938D924536BEAC5B6 /* Pods-CompanyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompanyApp/Pods-CompanyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C953CEC4AE70D8F970D70E1 /* Pods-CompanyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompanyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompanyApp/Pods-CompanyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				26595DAB1F25D8E20031A0BC /* NewsDetailsVC.swift */,
 				26595DAD1F2619DD0031A0BC /* OurWorkTVC.swift */,
 				26595DB11F2628F40031A0BC /* OurWorkDetailsVC.swift */,
+				26CD76681F33577100ECE530 /* ContactVC.swift */,
+				26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,8 +305,10 @@
 				26595DB21F2628F40031A0BC /* OurWorkDetailsVC.swift in Sources */,
 				261E39771F2337B3005DAC6F /* MainVC.swift in Sources */,
 				26595DAA1F25D1DB0031A0BC /* NewsTVC.swift in Sources */,
+				26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */,
 				265048D21F236BCD008F47D5 /* AboutUsTVC.swift in Sources */,
 				26595DAE1F2619DD0031A0BC /* OurWorkTVC.swift in Sources */,
+				26CD76691F33577100ECE530 /* ContactVC.swift in Sources */,
 				261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */,
 				26595DB01F261C330031A0BC /* OurWorkCell.swift in Sources */,
 				265048D41F236C1F008F47D5 /* AboutUsFile.swift in Sources */,
