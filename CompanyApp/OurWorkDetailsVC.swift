@@ -10,26 +10,36 @@ import UIKit
 
 class OurWorkDetailsVC: UIViewController {
 
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var textLbl: UILabel!
+    @IBOutlet weak var addressLbl: UILabel!
+    @IBOutlet weak var cityLbl: UILabel!
+    @IBOutlet weak var imageLbl: UIImageView!
+    
+    @IBAction func registrationBtnPressed(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func locationBtnPressed(_ sender: UIButton) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func confugureDetailView(ourWrok: OurWorkFile) {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        titleLbl.text = ourWrok.name
+        dateLbl.text = ourWrok.date
+        textLbl.text = ourWrok.details
+        addressLbl.text = ourWrok.address
+        cityLbl.text = ourWrok.city
+        imageLbl.image = UIImage(named: ourWrok.image)
+        
     }
-    */
 
 }

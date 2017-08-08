@@ -306,31 +306,103 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBG-VG-iT5">
-                                <rect key="frame" x="8" y="332" width="359" height="327"/>
+                                <rect key="frame" x="8" y="364" width="359" height="183"/>
                                 <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddX-uK-Q8J">
+                                <rect key="frame" x="8" y="568" width="179.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-51-QG5">
+                                <rect key="frame" x="187" y="568" width="179.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-va-TeP">
+                                <rect key="frame" x="0.0" y="623" width="187.5" height="44"/>
+                                <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1Bi-yf-1Ii"/>
+                                    <constraint firstAttribute="width" constant="187.5" id="epw-9V-45U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Registration">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registrationBtnPressed:" destination="Mmo-PB-1IL" eventType="touchUpInside" id="Tm3-lJ-oDg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI3-6n-oRd">
+                                <rect key="frame" x="187" y="623" width="187.5" height="44"/>
+                                <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187.5" id="6o8-95-e2m"/>
+                                    <constraint firstAttribute="height" constant="44" id="USi-nZ-80W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationBtnPressed:" destination="Mmo-PB-1IL" eventType="touchUpInside" id="wgf-3B-oHf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuc-43-JdW">
+                                <rect key="frame" x="107" y="332" width="160" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hBG-VG-iT5" firstAttribute="top" secondItem="Pgr-0v-jfd" secondAttribute="bottom" constant="8" id="0aw-r2-vcs"/>
+                            <constraint firstItem="hBG-VG-iT5" firstAttribute="top" secondItem="Pgr-0v-jfd" secondAttribute="bottom" constant="40" id="0aw-r2-vcs"/>
+                            <constraint firstItem="Cz2-va-TeP" firstAttribute="top" secondItem="ddX-uK-Q8J" secondAttribute="bottom" constant="25" id="1Bo-1c-kRY"/>
                             <constraint firstItem="Pgr-0v-jfd" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" id="1Qa-tY-LMz"/>
+                            <constraint firstItem="ddX-uK-Q8J" firstAttribute="top" secondItem="hBG-VG-iT5" secondAttribute="bottom" constant="21" id="2vq-Qm-UrC"/>
                             <constraint firstAttribute="trailing" secondItem="hBG-VG-iT5" secondAttribute="trailing" constant="8" id="4VX-Eh-CkJ"/>
+                            <constraint firstItem="hBG-VG-iT5" firstAttribute="top" secondItem="nuc-43-JdW" secondAttribute="bottom" constant="2" id="LuW-Wc-VJo"/>
+                            <constraint firstAttribute="trailing" secondItem="ddX-uK-Q8J" secondAttribute="trailing" constant="187.5" id="MAn-vk-Gts"/>
                             <constraint firstItem="GNS-Gv-Gnb" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" id="Mkp-IX-IFp"/>
+                            <constraint firstItem="ddX-uK-Q8J" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" constant="8" id="NDq-sM-L8b"/>
                             <constraint firstItem="Pgr-0v-jfd" firstAttribute="top" secondItem="GNS-Gv-Gnb" secondAttribute="bottom" id="Nsb-Mv-hbE"/>
+                            <constraint firstItem="Cz2-va-TeP" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" id="TdB-cW-i7I"/>
+                            <constraint firstItem="dTK-51-QG5" firstAttribute="top" secondItem="hBG-VG-iT5" secondAttribute="bottom" constant="21" id="V4i-Tb-bAm"/>
+                            <constraint firstAttribute="trailing" secondItem="WI3-6n-oRd" secondAttribute="trailing" id="WUu-ap-XQb"/>
+                            <constraint firstItem="WI3-6n-oRd" firstAttribute="top" secondItem="dTK-51-QG5" secondAttribute="bottom" constant="25" id="WhJ-s6-NGR"/>
                             <constraint firstAttribute="trailing" secondItem="GNS-Gv-Gnb" secondAttribute="trailing" id="aLP-zN-5AH"/>
-                            <constraint firstItem="DUG-Ic-9hN" firstAttribute="top" secondItem="hBG-VG-iT5" secondAttribute="bottom" constant="8" id="jIq-Sc-VWc"/>
+                            <constraint firstAttribute="trailing" secondItem="dTK-51-QG5" secondAttribute="trailing" constant="8.5" id="cNq-P4-vRl"/>
+                            <constraint firstItem="DUG-Ic-9hN" firstAttribute="top" secondItem="hBG-VG-iT5" secondAttribute="bottom" constant="120" id="jIq-Sc-VWc"/>
                             <constraint firstAttribute="trailing" secondItem="Pgr-0v-jfd" secondAttribute="trailing" id="lGh-tU-St1"/>
+                            <constraint firstItem="nuc-43-JdW" firstAttribute="top" secondItem="Pgr-0v-jfd" secondAttribute="bottom" constant="8" id="lOP-ad-8dT"/>
+                            <constraint firstItem="nuc-43-JdW" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leadingMargin" constant="91" id="lTR-ov-dc0"/>
+                            <constraint firstItem="DUG-Ic-9hN" firstAttribute="top" secondItem="WI3-6n-oRd" secondAttribute="bottom" id="lVO-m4-FJ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nuc-43-JdW" secondAttribute="trailing" constant="92" id="len-dT-vQr"/>
+                            <constraint firstItem="DUG-Ic-9hN" firstAttribute="top" secondItem="Cz2-va-TeP" secondAttribute="bottom" id="pg6-Pd-UKv"/>
+                            <constraint firstItem="dTK-51-QG5" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" constant="187" id="qIW-ia-pRn"/>
                             <constraint firstItem="GNS-Gv-Gnb" firstAttribute="top" secondItem="5dj-RM-DaU" secondAttribute="bottom" id="sfS-dO-DdZ"/>
                             <constraint firstItem="hBG-VG-iT5" firstAttribute="leading" secondItem="ZHi-IE-c1D" secondAttribute="leading" constant="8" id="tQu-8M-66h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLbl" destination="ddX-uK-Q8J" id="QbF-Ts-kGq"/>
+                        <outlet property="cityLbl" destination="dTK-51-QG5" id="OQu-MI-ohy"/>
+                        <outlet property="dateLbl" destination="nuc-43-JdW" id="7su-8v-bqk"/>
+                        <outlet property="imageLbl" destination="GNS-Gv-Gnb" id="tOl-s5-krG"/>
+                        <outlet property="textLbl" destination="hBG-VG-iT5" id="cXd-Fc-eYw"/>
+                        <outlet property="titleLbl" destination="Pgr-0v-jfd" id="7oj-9a-5Gu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNN-k1-OY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="507"/>
+            <point key="canvasLocation" x="2736.8000000000002" y="506.89655172413796"/>
         </scene>
         <!--News DetailsVC-->
         <scene sceneID="ToV-qh-5jn">
@@ -477,13 +549,13 @@
                                 <rect key="frame" x="36" y="134" width="303" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your email here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKp-a6-xLt">
                                 <rect key="frame" x="36" y="172" width="303" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-Wn-Seg">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -503,7 +575,7 @@
                                 <rect key="frame" x="36" y="281" width="303" height="285"/>
                                 <color key="backgroundColor" red="0.97691941624365486" green="0.97691941624365486" blue="0.97691941624365486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -615,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpO-OM-Xpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736.8000000000002" y="-870.31484257871068"/>
+            <point key="canvasLocation" x="2745" y="-869"/>
         </scene>
         <!--About Us DetailsVC-->
         <scene sceneID="pd4-s8-C1m">
