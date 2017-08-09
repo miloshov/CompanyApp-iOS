@@ -26,12 +26,16 @@
 		26767EAB1F234A5500F0C013 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */; };
 		26AC34581F38CE4900249554 /* OurWorkFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC34571F38CE4900249554 /* OurWorkFile.swift */; };
 		26AC345B1F38D2F000249554 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC345A1F38D2F000249554 /* Constants.swift */; };
+		26AC34601F3B4A8300249554 /* OurPartnersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC345F1F3B4A8300249554 /* OurPartnersVC.swift */; };
+		26AC34621F3B4E2700249554 /* PartnersFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC34611F3B4E2700249554 /* PartnersFile.swift */; };
+		26AC34641F3B4FA100249554 /* OurPartnersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC34631F3B4FA100249554 /* OurPartnersCell.swift */; };
+		26AC34661F3B551200249554 /* PartnerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC34651F3B551200249554 /* PartnerDetailsVC.swift */; };
+		26AC34681F3B74DF00249554 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC34671F3B74DF00249554 /* RegistrationVC.swift */; };
+		26AC346C1F3B8E6000249554 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC346B1F3B8E6000249554 /* LocationVC.swift */; };
 		26C623781F349A9C007C9427 /* TestLogo#1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C623761F349A9C007C9427 /* TestLogo#1.png */; };
 		26C623791F349A9C007C9427 /* TestMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C623771F349A9C007C9427 /* TestMap.png */; };
 		26C6237B1F34AB88007C9427 /* OurHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6237A1F34AB88007C9427 /* OurHistoryVC.swift */; };
 		26C6237D1F34ACA1007C9427 /* OurVisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6237C1F34ACA1007C9427 /* OurVisionVC.swift */; };
-		26C6237F1F34AD3A007C9427 /* OurPartnersCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6237E1F34AD3A007C9427 /* OurPartnersCollectionVC.swift */; };
-		26C623871F34BEC7007C9427 /* OurPartnersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C623861F34BEC7007C9427 /* OurPartnersCell.swift */; };
 		26CD76691F33577100ECE530 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD76681F33577100ECE530 /* ContactVC.swift */; };
 		26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */; };
 		6EBC0B5DA0DCB4558813BD97 /* Pods_CompanyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D93E16905500D2AFF4EDD2 /* Pods_CompanyApp.framework */; };
@@ -60,12 +64,16 @@
 		26767EAA1F234A5500F0C013 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26AC34571F38CE4900249554 /* OurWorkFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurWorkFile.swift; sourceTree = "<group>"; };
 		26AC345A1F38D2F000249554 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		26AC345F1F3B4A8300249554 /* OurPartnersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurPartnersVC.swift; sourceTree = "<group>"; };
+		26AC34611F3B4E2700249554 /* PartnersFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnersFile.swift; sourceTree = "<group>"; };
+		26AC34631F3B4FA100249554 /* OurPartnersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurPartnersCell.swift; sourceTree = "<group>"; };
+		26AC34651F3B551200249554 /* PartnerDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerDetailsVC.swift; sourceTree = "<group>"; };
+		26AC34671F3B74DF00249554 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		26AC346B1F3B8E6000249554 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		26C623761F349A9C007C9427 /* TestLogo#1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TestLogo#1.png"; sourceTree = "<group>"; };
 		26C623771F349A9C007C9427 /* TestMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestMap.png; sourceTree = "<group>"; };
 		26C6237A1F34AB88007C9427 /* OurHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurHistoryVC.swift; sourceTree = "<group>"; };
 		26C6237C1F34ACA1007C9427 /* OurVisionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurVisionVC.swift; sourceTree = "<group>"; };
-		26C6237E1F34AD3A007C9427 /* OurPartnersCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurPartnersCollectionVC.swift; sourceTree = "<group>"; };
-		26C623861F34BEC7007C9427 /* OurPartnersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurPartnersCell.swift; sourceTree = "<group>"; };
 		26CD76681F33577100ECE530 /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendQuestionVC.swift; sourceTree = "<group>"; };
 		26FB7BFE1F31F7E1001BE22C /* CompanyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CompanyApp.entitlements; sourceTree = "<group>"; };
@@ -128,7 +136,7 @@
 				265048CF1F236B81008F47D5 /* AboutUsCell.swift */,
 				26595DA71F25D19E0031A0BC /* NewsCell.swift */,
 				26595DAF1F261C330031A0BC /* OurWorkCell.swift */,
-				26C623861F34BEC7007C9427 /* OurPartnersCell.swift */,
+				26AC34631F3B4FA100249554 /* OurPartnersCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				26767EA81F23460400F0C013 /* CallUs.swift */,
 				265048D31F236C1F008F47D5 /* AboutUsFile.swift */,
 				26AC34571F38CE4900249554 /* OurWorkFile.swift */,
+				26AC34611F3B4E2700249554 /* PartnersFile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -166,7 +175,10 @@
 				26CD766A1F3357F500ECE530 /* SendQuestionVC.swift */,
 				26C6237A1F34AB88007C9427 /* OurHistoryVC.swift */,
 				26C6237C1F34ACA1007C9427 /* OurVisionVC.swift */,
-				26C6237E1F34AD3A007C9427 /* OurPartnersCollectionVC.swift */,
+				26AC345F1F3B4A8300249554 /* OurPartnersVC.swift */,
+				26AC34651F3B551200249554 /* PartnerDetailsVC.swift */,
+				26AC34671F3B74DF00249554 /* RegistrationVC.swift */,
+				26AC346B1F3B8E6000249554 /* LocationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,13 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26AC34601F3B4A8300249554 /* OurPartnersVC.swift in Sources */,
 				26595DB21F2628F40031A0BC /* OurWorkDetailsVC.swift in Sources */,
 				261E39771F2337B3005DAC6F /* MainVC.swift in Sources */,
 				26595DAA1F25D1DB0031A0BC /* NewsTVC.swift in Sources */,
 				26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */,
 				265048D21F236BCD008F47D5 /* AboutUsVC.swift in Sources */,
 				26595DAE1F2619DD0031A0BC /* OurWorkTVC.swift in Sources */,
-				26C6237F1F34AD3A007C9427 /* OurPartnersCollectionVC.swift in Sources */,
 				26CD76691F33577100ECE530 /* ContactVC.swift in Sources */,
 				261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */,
 				26595DB01F261C330031A0BC /* OurWorkCell.swift in Sources */,
@@ -343,9 +355,13 @@
 				26767EA91F23460400F0C013 /* CallUs.swift in Sources */,
 				265048D01F236B81008F47D5 /* AboutUsCell.swift in Sources */,
 				26595DA81F25D19E0031A0BC /* NewsCell.swift in Sources */,
+				26AC346C1F3B8E6000249554 /* LocationVC.swift in Sources */,
+				26AC34641F3B4FA100249554 /* OurPartnersCell.swift in Sources */,
 				26595DAC1F25D8E20031A0BC /* NewsDetailsVC.swift in Sources */,
 				26AC34581F38CE4900249554 /* OurWorkFile.swift in Sources */,
-				26C623871F34BEC7007C9427 /* OurPartnersCell.swift in Sources */,
+				26AC34621F3B4E2700249554 /* PartnersFile.swift in Sources */,
+				26AC34681F3B74DF00249554 /* RegistrationVC.swift in Sources */,
+				26AC34661F3B551200249554 /* PartnerDetailsVC.swift in Sources */,
 				26C6237B1F34AB88007C9427 /* OurHistoryVC.swift in Sources */,
 				265048D61F24CE0F008F47D5 /* AboutUsDetailsVC.swift in Sources */,
 				26C6237D1F34ACA1007C9427 /* OurVisionVC.swift in Sources */,
