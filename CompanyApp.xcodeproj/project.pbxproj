@@ -118,6 +118,7 @@
 				261E39871F2337F5005DAC6F /* Model */,
 				261E39861F2337EB005DAC6F /* View */,
 				265048CE1F236B4D008F47D5 /* Controller */,
+				26AC346D1F3E22FB00249554 /* Extensions */,
 				261E39741F2337B3005DAC6F /* AppDelegate.swift */,
 				261E39781F2337B3005DAC6F /* Main.storyboard */,
 				261E397B1F2337B3005DAC6F /* Assets.xcassets */,
@@ -189,6 +190,13 @@
 				26AC345A1F38D2F000249554 /* Constants.swift */,
 			);
 			name = Utlilities;
+			sourceTree = "<group>";
+		};
+		26AC346D1F3E22FB00249554 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		5851E46FE55C8B348C234E22 /* Frameworks */ = {

@@ -31,15 +31,4 @@ class OurWorkDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func confugureDetailView(ourWrok: OurWorkFile) {
-    
-        titleLbl.text = ourWrok.name
-        dateLbl.text = ourWrok.date
-        textLbl.text = ourWrok.details
-        addressLbl.text = ourWrok.address
-        cityLbl.text = ourWrok.city
-        imageLbl.image = UIImage(named: ourWrok.image)
-        
-    }
-
 }

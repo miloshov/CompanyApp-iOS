@@ -16,4 +16,5 @@ class OurWorkCell: UITableViewCell {
     @IBOutlet weak var ourWorkTitleLbl: UILabel!
     @IBOutlet weak var ourWorkSubtitleLbl: UILabel!
 
+    
 }
