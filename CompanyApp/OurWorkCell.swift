@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class OurWorkCell: UITableViewCell {
     
@@ -17,4 +18,30 @@ class OurWorkCell: UITableViewCell {
     @IBOutlet weak var ourWorkSubtitleLbl: UILabel!
 
     
-}
+    func configureCell (work: OurWorkFile) {
+        
+        ourWorkTitleLbl.text = work.name
+        ourWorkSubtitleLbl.text = work.details
+        
+        downloadImage()
+        
+    }
+    
+    
+    func downloadImage() {
+        
+        Alamofire.request("https://upload.wikimedia.org/wikipedia/commons/1/1c/Earth_surface_NGDC_2000.jpg").downloadProgress(closure: { (progress) in
+            
+            
+        }).responseData { (response) in
+
+            
+            }
+            
+        }
+        
+        
+        
+    }
+    
+

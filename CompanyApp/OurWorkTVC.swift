@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class OurWorkTVC: UITableViewController {
     
@@ -15,18 +16,17 @@ class OurWorkTVC: UITableViewController {
     
     var allOurWork = [OurWorkFile]()
     var ourWork: OurWorkFile!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         tableView.delegate = self
         tableView.dataSource = self
         
         downloadOurWorkData {
-            
-            // some code...
+        
+            self.downloadOurWorkImage()
             
         }
 
@@ -55,11 +55,7 @@ class OurWorkTVC: UITableViewController {
     
         let forOurWork = allOurWork[indexPath.row]
         
-        let imageLoad = UIImage(named: "\(forOurWork.image)")
-        
-        cell.ourWorkTitleLbl?.text = forOurWork.name
-        cell.ourWorkSubtitleLbl?.text = forOurWork.details
-        cell.ourWorkImage?.image = imageLoad
+        cell.configureCell(work: forOurWork)
 
         return cell
         
@@ -109,5 +105,19 @@ class OurWorkTVC: UITableViewController {
         }
         
     }
-
+    
+    func downloadOurWorkImage () {
+        
+        Alamofire.request("https://httpbin.org/image/png").responseImage { response in
+            debugPrint(response)
+            debugPrint(response.result)
+            
+            
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
+            }
+            
+        }
+        
+    }
 }
