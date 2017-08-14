@@ -23,24 +23,37 @@ class OurWorkCell: UITableViewCell {
         ourWorkTitleLbl.text = work.name
         ourWorkSubtitleLbl.text = work.details
         
-        downloadImage()
-        
+        downloadImage(work.image)
     }
     
-    
-    func downloadImage() {
+    func downloadImage(_ stringURL: String) {
         
-        Alamofire.request("https://upload.wikimedia.org/wikipedia/commons/1/1c/Earth_surface_NGDC_2000.jpg").downloadProgress(closure: { (progress) in
-            
-            
-        }).responseData { (response) in
-
-            
+        Alamofire.request(stringURL).responseImage { (response) in
+            if let image = response.result.value {
+                DispatchQueue.main.async { [unowned self] in
+                    self.ourWorkImage.image = image
+                }
+            } else { // Can't Find legit image, use earth surface
+                let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Earth_surface_NGDC_2000.jpg")!
+                DispatchQueue.global(qos: .background).async {
+                    
+                    do {
+                        
+                        let data = try Data(contentsOf: url)
+                        DispatchQueue.main.async {
+                            self.ourWorkImage.image = UIImage(data: data)
+                        }
+                        
+                    } catch {
+                        //handle the error
+                        
+                    }
+                }
+                
             }
-            
         }
         
-        
+    }
         
     }
     
