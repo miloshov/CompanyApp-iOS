@@ -34,7 +34,7 @@ class OurWorkCell: UITableViewCell {
                     self.ourWorkImage.image = image
                 }
             } else { // Can't Find legit image, use earth surface
-                let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Earth_surface_NGDC_2000.jpg")!
+                let url = URL(string: "http://www.visitcolumbiamo.com/wp-content/themes/COMO/img/photo-unavailable.jpg")!
                 DispatchQueue.global(qos: .background).async {
                     
                     do {

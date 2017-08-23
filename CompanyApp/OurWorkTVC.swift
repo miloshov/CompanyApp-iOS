@@ -21,13 +21,14 @@ class OurWorkTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.isHidden = true
+
         tableView.delegate = self
         tableView.dataSource = self
         
         downloadOurWorkData {
         
             self.downloadOurWorkImage()
-            
         }
 
         // loadDataTest()
@@ -56,7 +57,9 @@ class OurWorkTVC: UITableViewController {
         let forOurWork = allOurWork[indexPath.row]
         
         cell.configureCell(work: forOurWork)
-
+            
+        self.tableView.isHidden = false
+    
         return cell
         
         } else {
@@ -101,8 +104,8 @@ class OurWorkTVC: UITableViewController {
             }
             
             completed()
-            
         }
+        
         
     }
     
@@ -118,6 +121,6 @@ class OurWorkTVC: UITableViewController {
             }
             
         }
-        
+            
     }
 }
