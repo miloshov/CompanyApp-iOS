@@ -9,6 +9,15 @@
 import UIKit
 
 class RegistrationVC: UIViewController {
+    
+    // MARK: Properties
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

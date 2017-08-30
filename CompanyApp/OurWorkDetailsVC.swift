@@ -17,14 +17,24 @@ class OurWorkDetailsVC: UIViewController {
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var imageLbl: UIImageView!
     
-    @IBAction func registrationBtnPressed(_ sender: UIButton) {
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
     }
     
-    
-    @IBAction func locationBtnPressed(_ sender: UIButton) {
+    @IBAction func shareBtnPressed(_ sender: UIButton) {
+        
+        let shareButton = UIActivityViewController(activityItems: [imageLbl.image!, textLbl.text!], applicationActivities: nil)
+        
+        shareButton.popoverPresentationController?.sourceView = self.view
+        
+        self.present(shareButton, animated: true, completion: nil)
+        
     }
     
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

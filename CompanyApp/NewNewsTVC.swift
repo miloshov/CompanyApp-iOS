@@ -1,40 +1,38 @@
 //
-//  NewsTVC.swift
+//  NewNewsTVC.swift
 //  CompanyApp
 //
-//  Created by Milos Hovjecki on 7/24/17.
+//  Created by Milos Hovjecki on 8/30/17.
 //  Copyright © 2017 Hajora. All rights reserved.
 //
 
 import UIKit
 
-class NewsTVC: UITableViewController {
-    
-    var allNews = [AboutUsFile]()
+class NewNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var allNews = [AboutUsFile]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadDataTest()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        loadDataTest()
+
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allNews.count
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let newsCellIdentifier = "NewsCell"
+        let newsCellIdentifier = "newNewsCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: newsCellIdentifier, for: indexPath) as? NewsCell else {
             
@@ -50,7 +48,7 @@ class NewsTVC: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let thoseAreNews = allNews[indexPath.row]
         
@@ -111,4 +109,3 @@ class NewsTVC: UITableViewController {
     }
 
 }
-

@@ -10,7 +10,15 @@ import UIKit
 
 class OurPartnersVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // MARK: Properties
+    
     @IBOutlet weak var collection: UICollectionView!
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     var allOurPartners = [PartnersFile]()
     
@@ -64,7 +72,7 @@ class OurPartnersVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         return CGSize(width: 150, height: 150)
     }
     
-    private func loadDataTest () {  
+    private func loadDataTest () {
         
         let photoImage1 = UIImage(named: "Company#2.jpg")
         let photoImage2 = UIImage(named: "Company#3.jpg")

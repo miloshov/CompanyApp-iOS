@@ -9,6 +9,27 @@
 import UIKit
 
 class OurVisionVC: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var imageLbl: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var textLbl: UILabel!
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func shareBtnPressed(_ sender: UIButton) {
+        
+        let shareButton = UIActivityViewController(activityItems: [imageLbl.image!, textLbl.text!], applicationActivities: nil)
+        
+        shareButton.popoverPresentationController?.sourceView = self.view
+        
+        self.present(shareButton, animated: true, completion: nil)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +37,5 @@ class OurVisionVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

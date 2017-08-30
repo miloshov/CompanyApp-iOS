@@ -11,10 +11,18 @@ import MessageUI
 
 class SendQuestionVC: UIViewController, MFMailComposeViewControllerDelegate {
     
+    // MARK: Properties
 
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func SendBtnPressed(_ sender: UIButton) {
         
