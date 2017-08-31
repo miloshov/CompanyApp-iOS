@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class NewsCell: UITableViewCell {
     
@@ -17,15 +18,51 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var newsSubtitleLbl: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell (news: NewsFile) {
+        
+        newsTitleLbl.text = news.name
+        newsSubtitleLbl.text = news.details
+        downloadImage(news.image)
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func downloadImage(_ stringURL: String  ) {
+        
+        Alamofire.request(stringURL).responseImage { (response) in
+            
+            if let image = response.result.value {
+                
+                DispatchQueue.main.async { [unowned self] in
+                    
+                    self.newsImageView.image = image
+                }
+                
+            } else {
+                    
+                    let url = URL(string: "http://www.visitcolumbiamo.com/wp-content/themes/COMO/img/photo-unavailable.jpg")!
+                    DispatchQueue.global(qos: .background).async {
+                        
+                        do {
+                            
+                            let data = try Data(contentsOf: url)
+                            DispatchQueue.main.async {
+                                
+                                self.newsImageView.image = UIImage(data: data)
+                                
+                            }
+                            
+                        } catch {
+                            
+                            // handle error
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+        
     }
 
 }

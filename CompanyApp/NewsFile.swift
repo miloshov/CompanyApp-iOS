@@ -64,6 +64,34 @@ class NewsFile {
         
     }
     
+    init(ourNewsDict: Dictionary<String, AnyObject>) {
+        
+        if let newName = ourNewsDict["name"] as? String {
+            
+            self._name = newName
+            
+        }
+        
+        if let newDate = ourNewsDict["date"] as? String {
+            
+            self._date = newDate
+            
+        }
+        
+        if let newDetails = ourNewsDict["details"] as? String {
+            
+            self._details = newDetails
+            
+        }
+        
+        if let newImage = ourNewsDict["image"] as? String {
+            
+            self._image = newImage
+            
+        }
+        
+    }
+    
     
     
 }
