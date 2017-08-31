@@ -86,6 +86,29 @@ class NewOurWorkTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toOurWorkDetailsVC" {
+            
+            let ourWorkDetails = segue.destination as! OurWorkDetailsVC
+        
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                
+                let selectedRow = allOurWork[indexPath.row]
+                
+                ourWorkDetails.getTitle = selectedRow.name
+                ourWorkDetails.getText = selectedRow.details
+                ourWorkDetails.getDate = selectedRow.date
+                ourWorkDetails.getAddress = selectedRow.address
+                ourWorkDetails.getCity = selectedRow.city
+                ourWorkDetails.downloadImage(selectedRow.image)
+                
+            }
+            
+        }
+        
+    }
+    
     
     func downloadOurWorkData (completed: @escaping DownloadComplete) {
         

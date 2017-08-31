@@ -15,10 +15,17 @@ class OurWorkDetailsVC: UIViewController {
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
-    @IBOutlet weak var textLbl: UILabel!
+    @IBOutlet weak var textLbl: UITextView!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var imageLbl: UIImageView!
+    
+    var getTitle = String()
+    var getDate = String()
+    var getText = String()
+    var getAddress = String()
+    var getCity = String()
+    
 
     
     // MARK: Back Button dismiss configured
@@ -41,19 +48,54 @@ class OurWorkDetailsVC: UIViewController {
         
     }
     
-    func configureView (view: OurWorkFile) {
-        
-        titleLbl.text = view.name
-        dateLbl.text = view.date
-        textLbl.text = view.details
-        addressLbl.text = view.address
-        cityLbl.text = view.city
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLbl.text = getTitle
+        dateLbl.text = getDate
+        textLbl.text = getText
+        addressLbl.text = getAddress
+        cityLbl.text = getCity
     
+    }
+    
+    func downloadImage(_ stringURL: String  ) {
+        
+        Alamofire.request(stringURL).responseImage { (response) in
+            
+            if let image = response.result.value {
+                
+                DispatchQueue.main.async { [unowned self] in
+                    
+                    self.imageLbl.image = image
+                }
+                
+            } else {
+                
+                let url = URL(string: "http://www.visitcolumbiamo.com/wp-content/themes/COMO/img/photo-unavailable.jpg")!
+                DispatchQueue.global(qos: .background).async {
+                    
+                    do {
+                        
+                        let data = try Data(contentsOf: url)
+                        DispatchQueue.main.async {
+                            
+                            self.imageLbl.image = UIImage(data: data)
+                            
+                        }
+                        
+                    } catch {
+                        
+                        // handle error
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
     }
 
 }
