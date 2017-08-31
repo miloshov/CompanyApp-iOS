@@ -90,8 +90,10 @@ class AllNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
                 let selectedRow = allNews[indexPath.row]
             
-                newsDetails.configureDetailsVC(news: selectedRow)
-            
+                newsDetails.getTitle = selectedRow.name
+                newsDetails.getText = selectedRow.details
+                newsDetails.downloadImage(selectedRow.image)
+                
             }
             
         }

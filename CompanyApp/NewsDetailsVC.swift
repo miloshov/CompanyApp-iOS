@@ -15,7 +15,12 @@ class NewsDetailsVC: UIViewController {
     
     @IBOutlet weak var imageLbl: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var textLbl: UILabel!
+    @IBOutlet weak var textLbl: UITextView!
+    
+    var getTitle = String()
+    var getText = String()
+    
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
@@ -36,17 +41,12 @@ class NewsDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLbl.text = getTitle
+        textLbl.text = getText
 
     }
-    
-    func configureDetailsVC(news: NewsFile) {
-        
-        titleLbl.text = news.name
-        textLbl.text = news.details
-        downloadImage(news.image)
-        
-    }
-    
+
     func downloadImage(_ stringURL: String  ) {
         
         Alamofire.request(stringURL).responseImage { (response) in

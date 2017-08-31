@@ -677,19 +677,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Company#2" translatesAutoresizingMaskIntoConstraints="NO" id="h0Y-Vo-KGI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Company#2" translatesAutoresizingMaskIntoConstraints="NO" id="h0Y-Vo-KGI">
                                 <rect key="frame" x="0.0" y="60" width="375" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="tfH-qo-iMO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="19" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-5U-hbw">
-                                <rect key="frame" x="8" y="320" width="359" height="295"/>
-                                <string key="text">In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.In this lesson, you save a meal list across FoodTracker app sessions. Understanding and implementing data persistence is a vital part of iOS app development. iOS has many persistent data storage solutions; in this lesson, you’ll use NSCoding as the data persistence mechanism in the FoodTracker app. NSCoding is a protocol that enables a lightweight solution for archiving objects and other structures. Archived objects can be stored on disk and retrieved at a later time.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-mY-O49">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
@@ -716,32 +709,39 @@
                                     <constraint firstAttribute="height" constant="44" id="ogW-2g-JZF"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-Yf-eZR">
+                                <rect key="frame" x="0.0" y="320" width="375" height="303"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GuP-Yf-eZR" secondAttribute="trailing" id="2wq-t2-pq0"/>
                             <constraint firstItem="PoN-KB-482" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="4BA-Cs-IwO"/>
                             <constraint firstItem="h0Y-Vo-KGI" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="5Hi-wQ-Cn8"/>
                             <constraint firstItem="dWd-mY-O49" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="Erj-6Y-RrN"/>
-                            <constraint firstItem="OaF-5U-hbw" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" constant="8" id="HK6-cL-y06"/>
                             <constraint firstAttribute="trailing" secondItem="PoN-KB-482" secondAttribute="trailing" id="K3p-op-D2I"/>
+                            <constraint firstItem="GuP-Yf-eZR" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="MwY-NF-GF2"/>
                             <constraint firstItem="5bh-xT-S33" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="PVJ-GA-Dif"/>
                             <constraint firstItem="h0Y-Vo-KGI" firstAttribute="top" secondItem="5bh-xT-S33" secondAttribute="bottom" id="Rml-lB-bDO"/>
-                            <constraint firstItem="OaF-5U-hbw" firstAttribute="top" secondItem="PoN-KB-482" secondAttribute="bottom" id="SdO-HH-ZCA"/>
                             <constraint firstAttribute="trailing" secondItem="dWd-mY-O49" secondAttribute="trailing" id="SlY-6o-pFL"/>
-                            <constraint firstAttribute="trailing" secondItem="OaF-5U-hbw" secondAttribute="trailing" constant="8" id="UdT-mK-JFQ"/>
                             <constraint firstItem="5bh-xT-S33" firstAttribute="top" secondItem="KpN-gk-D8O" secondAttribute="top" id="dJU-SH-k3x"/>
                             <constraint firstItem="lah-VM-ZFG" firstAttribute="top" secondItem="dWd-mY-O49" secondAttribute="bottom" id="f7Y-Zy-mz0"/>
-                            <constraint firstAttribute="bottom" secondItem="OaF-5U-hbw" secondAttribute="bottom" constant="52" id="gqu-3S-d9M"/>
+                            <constraint firstItem="dWd-mY-O49" firstAttribute="top" secondItem="GuP-Yf-eZR" secondAttribute="bottom" id="g5N-G6-RxZ"/>
                             <constraint firstAttribute="trailing" secondItem="5bh-xT-S33" secondAttribute="trailing" id="jk9-XA-tVB"/>
                             <constraint firstAttribute="trailing" secondItem="h0Y-Vo-KGI" secondAttribute="trailing" id="ldm-Be-C8C"/>
                             <constraint firstAttribute="trailing" secondItem="PoN-KB-482" secondAttribute="trailing" id="v9e-TF-gRG"/>
+                            <constraint firstItem="GuP-Yf-eZR" firstAttribute="top" secondItem="PoN-KB-482" secondAttribute="bottom" id="vax-v3-Cga"/>
                             <constraint firstItem="PoN-KB-482" firstAttribute="leading" secondItem="KpN-gk-D8O" secondAttribute="leading" id="w5a-DB-yKF"/>
                             <constraint firstItem="PoN-KB-482" firstAttribute="top" secondItem="h0Y-Vo-KGI" secondAttribute="bottom" id="wpK-2P-Bes"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageLbl" destination="h0Y-Vo-KGI" id="3Yc-ln-lSK"/>
-                        <outlet property="textLbl" destination="OaF-5U-hbw" id="23B-77-d9N"/>
+                        <outlet property="textLbl" destination="GuP-Yf-eZR" id="B6N-9a-cnN"/>
                         <outlet property="titleLbl" destination="PoN-KB-482" id="vAu-eK-b1i"/>
                     </connections>
                 </viewController>
