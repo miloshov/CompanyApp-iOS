@@ -108,9 +108,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2p-Vy-IvG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company App Template" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBM-xA-KL1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company App Template" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBM-xA-KL1">
                                         <rect key="frame" x="8" y="22" width="359" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -118,6 +117,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="tBM-xA-KL1" firstAttribute="top" secondItem="u2p-Vy-IvG" secondAttribute="top" constant="22" id="A1S-bz-LVx"/>
+                                    <constraint firstItem="tBM-xA-KL1" firstAttribute="leading" secondItem="u2p-Vy-IvG" secondAttribute="leading" constant="8" id="L5R-ld-MyH"/>
+                                    <constraint firstAttribute="bottom" secondItem="tBM-xA-KL1" secondAttribute="bottom" constant="8" id="UOz-1A-70O"/>
+                                    <constraint firstAttribute="trailing" secondItem="tBM-xA-KL1" secondAttribute="trailing" constant="8" id="dH6-UL-Nvn"/>
                                     <constraint firstAttribute="height" constant="60" id="oaY-hL-WfS"/>
                                 </constraints>
                             </view>
@@ -610,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4z9-vT-n70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="611"/>
+            <point key="canvasLocation" x="3740" y="609"/>
         </scene>
         <!--News DetailsVC-->
         <scene sceneID="ToV-qh-5jn">
@@ -780,6 +783,9 @@
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" red="0.96399111680000005" green="0.76146687580000005" blue="0.1041357502" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="wo4-zG-SXA" eventType="touchUpInside" id="mg2-K4-9yT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.022786419400000001" green="0.67697097080000002" blue="0.45772937219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -800,10 +806,10 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHe-jf-Rvf" id="6JH-7Z-4X1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-pu-DqD">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-pu-DqD">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="89.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="G3c-LC-ZFv"/>
@@ -844,7 +850,6 @@
                                             <outlet property="newsImageView" destination="aPm-pu-DqD" id="411-N8-l8g"/>
                                             <outlet property="newsSubtitleLbl" destination="k25-9u-FyT" id="2sO-QC-etO"/>
                                             <outlet property="newsTitleLbl" destination="8Il-j3-NGN" id="ZjA-dc-JxB"/>
-                                            <segue destination="Rxz-Hq-95D" kind="show" identifier="toNewsDetailsVC" id="J3h-fV-cPk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -867,6 +872,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Djk-7v-GcO" id="f6E-vj-0RB"/>
+                        <segue destination="Rxz-Hq-95D" kind="show" identifier="toNewsDetailsVC" id="A0y-0V-AfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6Q-3u-4Uk" userLabel="First Responder" sceneMemberID="firstResponder"/>

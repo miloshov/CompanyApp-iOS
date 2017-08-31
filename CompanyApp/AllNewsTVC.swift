@@ -15,6 +15,11 @@ class AllNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var allNews = [NewsFile]()
     var ourNews: NewsFile!
 
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -72,6 +77,24 @@ class AllNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let thoseAreNews = allNews[indexPath.row]
         
         performSegue(withIdentifier: "toNewsDetailsVC", sender: thoseAreNews)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toNewsDetailsVC" {
+        
+            let newsDetails = segue.destination as! NewsDetailsVC
+        
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+            
+                let selectedRow = allNews[indexPath.row]
+            
+                newsDetails.titleLbl.text = selectedRow.name
+                newsDetails.textLbl.text = selectedRow.details
+            }
+            
+        }
         
     }
     
