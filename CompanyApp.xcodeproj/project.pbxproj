@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261DBB0C1F581A9D00B4982A /* NewsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261DBB0B1F581A9D00B4982A /* NewsFile.swift */; };
 		261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E39741F2337B3005DAC6F /* AppDelegate.swift */; };
 		261E39771F2337B3005DAC6F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E39761F2337B3005DAC6F /* MainVC.swift */; };
 		261E397A1F2337B3005DAC6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261E39781F2337B3005DAC6F /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		21D93E16905500D2AFF4EDD2 /* Pods_CompanyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompanyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		261DBB0B1F581A9D00B4982A /* NewsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFile.swift; sourceTree = "<group>"; };
 		261E39711F2337B3005DAC6F /* CompanyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261E39741F2337B3005DAC6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261E39761F2337B3005DAC6F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				265048D31F236C1F008F47D5 /* AboutUsFile.swift */,
 				26AC34571F38CE4900249554 /* OurWorkFile.swift */,
 				26AC34611F3B4E2700249554 /* PartnersFile.swift */,
+				261DBB0B1F581A9D00B4982A /* NewsFile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				26595DAA1F25D1DB0031A0BC /* NewsTVC.swift in Sources */,
 				26CD766B1F3357F500ECE530 /* SendQuestionVC.swift in Sources */,
 				265048D21F236BCD008F47D5 /* AboutUsVC.swift in Sources */,
+				261DBB0C1F581A9D00B4982A /* NewsFile.swift in Sources */,
 				26595DAE1F2619DD0031A0BC /* OurWorkTVC.swift in Sources */,
 				26CD76691F33577100ECE530 /* ContactVC.swift in Sources */,
 				261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */,

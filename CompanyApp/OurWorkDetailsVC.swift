@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class OurWorkDetailsVC: UIViewController {
+    
+    // MARK: Properties
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
@@ -16,12 +19,17 @@ class OurWorkDetailsVC: UIViewController {
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var imageLbl: UIImageView!
+
+    
+    // MARK: Back Button dismiss configured
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
         
     }
+    
+    // MARK: Share Button configured
     
     @IBAction func shareBtnPressed(_ sender: UIButton) {
         
@@ -33,12 +41,19 @@ class OurWorkDetailsVC: UIViewController {
         
     }
     
-
-
+    func configureView (view: OurWorkFile) {
+        
+        titleLbl.text = view.name
+        dateLbl.text = view.date
+        textLbl.text = view.details
+        addressLbl.text = view.address
+        cityLbl.text = view.city
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
     }
 
 }

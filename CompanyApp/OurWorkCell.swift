@@ -22,7 +22,6 @@ class OurWorkCell: UITableViewCell {
         
         ourWorkTitleLbl.text = work.name
         ourWorkSubtitleLbl.text = work.details
-        
         downloadImage(work.image)
     }
     
