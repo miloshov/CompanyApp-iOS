@@ -39,6 +39,14 @@ class NewsDetailsVC: UIViewController {
 
     }
     
+    func configureDetailsVC(news: NewsFile) {
+        
+        titleLbl.text = news.name
+        textLbl.text = news.details
+        downloadImage(news.image)
+        
+    }
+    
     func downloadImage(_ stringURL: String  ) {
         
         Alamofire.request(stringURL).responseImage { (response) in

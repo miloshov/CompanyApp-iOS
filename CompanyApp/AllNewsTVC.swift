@@ -90,8 +90,8 @@ class AllNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
                 let selectedRow = allNews[indexPath.row]
             
-                newsDetails.titleLbl.text = selectedRow.name
-                newsDetails.textLbl.text = selectedRow.details
+                newsDetails.configureDetailsVC(news: selectedRow)
+            
             }
             
         }
