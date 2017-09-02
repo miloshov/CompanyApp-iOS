@@ -16,6 +16,8 @@ class LocationVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var Work: OurWorkFile!
+    
     let manager = CLLocationManager()
     var myCoordinates = CLLocationCoordinate2D()
 
@@ -39,7 +41,7 @@ class LocationVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         
         let location = locations[0]
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(Work.lat)!, Double(Work.lon)!)
         let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         mapView.setRegion(region, animated: true)
         
