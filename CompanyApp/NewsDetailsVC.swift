@@ -17,11 +17,8 @@ class NewsDetailsVC: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var textLbl: UITextView!
     
-    var getTitle = String()
-    var getText = String()
-    
-    
-    
+    var news: NewsFile!
+
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
@@ -38,52 +35,38 @@ class NewsDetailsVC: UIViewController {
         
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageLbl.isHidden = true
         
-        titleLbl.text = getTitle
-        textLbl.text = getText
+        titleLbl.text = news.name
+        textLbl.text = news.details
+        downloadImage(news.image)
 
     }
-
+    
     func downloadImage(_ stringURL: String  ) {
         
-        Alamofire.request(stringURL).responseImage { (response) in
+        let url = URL(string: stringURL)!
+        
+        DispatchQueue.global().async { [unowned self] in
             
-            if let image = response.result.value {
+            do {
                 
-                DispatchQueue.main.async { [unowned self] in
+                let data = try Data(contentsOf: url)
+                
+                DispatchQueue.main.async {
                     
-                    self.imageLbl.image = image
+                    self.imageLbl.image = UIImage(data: data)
+                    self.imageLbl.isHidden = false
+            
                 }
+            } catch {
                 
-            } else {
-                
-                let url = URL(string: "http://www.visitcolumbiamo.com/wp-content/themes/COMO/img/photo-unavailable.jpg")!
-                DispatchQueue.global(qos: .background).async {
-                    
-                    do {
-                        
-                        let data = try Data(contentsOf: url)
-                        DispatchQueue.main.async {
-                            
-                            self.imageLbl.image = UIImage(data: data)
-                            
-                        }
-                        
-                    } catch {
-                        
-                        // handle error
-                        
-                    }
-                    
-                }
+                // handle error here
                 
             }
-            
         }
-        
     }
 
 }

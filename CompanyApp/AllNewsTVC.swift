@@ -74,30 +74,24 @@ class AllNewsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let thoseAreNews = allNews[indexPath.row]
+        let news = allNews[indexPath.row]
         
-        performSegue(withIdentifier: "toNewsDetailsVC", sender: thoseAreNews)
+        performSegue(withIdentifier: "toNewsDetailsVC", sender: news)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toNewsDetailsVC" {
-        
-            let newsDetails = segue.destination as! NewsDetailsVC
-        
-            if let indexPath = self.tableView.indexPathForSelectedRow {
             
-                let selectedRow = allNews[indexPath.row]
-            
-                newsDetails.getTitle = selectedRow.name
-                newsDetails.getText = selectedRow.details
-                newsDetails.downloadImage(selectedRow.image)
+            if let detailsVC = segue.destination as? NewsDetailsVC {
                 
+                if let news = sender as? NewsFile {
+                    
+                    detailsVC.news = news
+                }
             }
-            
         }
-        
     }
     
     func downlaodNewsData (completed: @escaping DownloadComplete) {

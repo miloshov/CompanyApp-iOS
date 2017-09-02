@@ -19,15 +19,11 @@ class OurWorkDetailsVC: UIViewController {
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var imageLbl: UIImageView!
+    @IBOutlet weak var latitudeLbl: UILabel!
+    @IBOutlet weak var longitudeLbl: UILabel!
     
-    var getTitle = String()
-    var getDate = String()
-    var getText = String()
-    var getAddress = String()
-    var getCity = String()
-    
+    var work: OurWorkFile!
 
-    
     // MARK: Back Button dismiss configured
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -51,51 +47,41 @@ class OurWorkDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLbl.text = getTitle
-        dateLbl.text = getDate
-        textLbl.text = getText
-        addressLbl.text = getAddress
-        cityLbl.text = getCity
+        latitudeLbl.isHidden = true
+        longitudeLbl.isHidden = true
+        
+        titleLbl.text = work.name
+        dateLbl.text = work.date
+        textLbl.text = work.details
+        addressLbl.text = work.address
+        cityLbl.text = work.city
+        latitudeLbl.text = work.lat
+        longitudeLbl.text = work.lon
     
     }
     
     func downloadImage(_ stringURL: String  ) {
         
-        Alamofire.request(stringURL).responseImage { (response) in
+        let url = URL(string: stringURL)!
+        
+        DispatchQueue.global().async { [unowned self] in
             
-            if let image = response.result.value {
+            do {
                 
-                DispatchQueue.main.async { [unowned self] in
+                let data = try Data(contentsOf: url)
+                
+                DispatchQueue.main.async {
                     
-                    self.imageLbl.image = image
-                }
-                
-            } else {
-                
-                let url = URL(string: "http://www.visitcolumbiamo.com/wp-content/themes/COMO/img/photo-unavailable.jpg")!
-                DispatchQueue.global(qos: .background).async {
-                    
-                    do {
-                        
-                        let data = try Data(contentsOf: url)
-                        DispatchQueue.main.async {
-                            
-                            self.imageLbl.image = UIImage(data: data)
-                            
-                        }
-                        
-                    } catch {
-                        
-                        // handle error
-                        
-                    }
+                    self.imageLbl.image = UIImage(data: data)
+                    self.imageLbl.isHidden = false
                     
                 }
+            } catch {
+                
+                // handle error here
                 
             }
-            
         }
-        
     }
 
 }

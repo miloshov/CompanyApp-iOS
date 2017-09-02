@@ -80,9 +80,9 @@ class NewOurWorkTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let thisIsOurWork = allOurWork[indexPath.row]
+        let work = allOurWork[indexPath.row]
         
-        performSegue(withIdentifier: "toOurWorkDetailsVC", sender: thisIsOurWork)
+        performSegue(withIdentifier: "toOurWorkDetailsVC", sender: work)
         
     }
     
@@ -90,23 +90,14 @@ class NewOurWorkTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         if segue.identifier == "toOurWorkDetailsVC" {
             
-            let ourWorkDetails = segue.destination as! OurWorkDetailsVC
-        
-            if let indexPath = self.tableView.indexPathForSelectedRow {
+            if let detailsVC = segue.destination as? OurWorkDetailsVC {
                 
-                let selectedRow = allOurWork[indexPath.row]
-                
-                ourWorkDetails.getTitle = selectedRow.name
-                ourWorkDetails.getText = selectedRow.details
-                ourWorkDetails.getDate = selectedRow.date
-                ourWorkDetails.getAddress = selectedRow.address
-                ourWorkDetails.getCity = selectedRow.city
-                ourWorkDetails.downloadImage(selectedRow.image)
-                
+                if let work = sender as? OurWorkFile {
+                    
+                    detailsVC.work = work
+                }
             }
-            
         }
-        
     }
     
     

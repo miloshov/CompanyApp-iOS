@@ -10,6 +10,7 @@
 		261DBB0C1F581A9D00B4982A /* NewsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261DBB0B1F581A9D00B4982A /* NewsFile.swift */; };
 		261DBB0E1F5839D300B4982A /* NewOurWorkTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261DBB0D1F5839D300B4982A /* NewOurWorkTVC.swift */; };
 		261DBB101F58415A00B4982A /* AllNewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261DBB0F1F58415A00B4982A /* AllNewsTVC.swift */; };
+		261DBB121F59D34E00B4982A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261DBB111F59D34E00B4982A /* CoreLocation.framework */; };
 		261E39751F2337B3005DAC6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E39741F2337B3005DAC6F /* AppDelegate.swift */; };
 		261E39771F2337B3005DAC6F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E39761F2337B3005DAC6F /* MainVC.swift */; };
 		261E397A1F2337B3005DAC6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261E39781F2337B3005DAC6F /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		261DBB0B1F581A9D00B4982A /* NewsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFile.swift; sourceTree = "<group>"; };
 		261DBB0D1F5839D300B4982A /* NewOurWorkTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOurWorkTVC.swift; sourceTree = "<group>"; };
 		261DBB0F1F58415A00B4982A /* AllNewsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllNewsTVC.swift; sourceTree = "<group>"; };
+		261DBB111F59D34E00B4982A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		261E39711F2337B3005DAC6F /* CompanyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261E39741F2337B3005DAC6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261E39761F2337B3005DAC6F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261DBB121F59D34E00B4982A /* CoreLocation.framework in Frameworks */,
 				6EBC0B5DA0DCB4558813BD97 /* Pods_CompanyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +208,7 @@
 		5851E46FE55C8B348C234E22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				261DBB111F59D34E00B4982A /* CoreLocation.framework */,
 				21D93E16905500D2AFF4EDD2 /* Pods_CompanyApp.framework */,
 			);
 			name = Frameworks;
