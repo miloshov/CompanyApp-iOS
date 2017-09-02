@@ -258,11 +258,11 @@
 				TargetAttributes = {
 					261E39701F2337B3005DAC6F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = JBKZ5A8R37;
+						DevelopmentTeam = Z6KXG7589J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -315,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9364FD204211B2C08CD0F0EF /* [CP] Copy Pods Resources */ = {
@@ -505,9 +505,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4277EFB938D924536BEAC5B6 /* Pods-CompanyApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CompanyApp/CompanyApp.entitlements;
-				DEVELOPMENT_TEAM = JBKZ5A8R37;
+				DEVELOPMENT_TEAM = Z6KXG7589J;
 				INFOPLIST_FILE = CompanyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -521,9 +521,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C953CEC4AE70D8F970D70E1 /* Pods-CompanyApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CompanyApp/CompanyApp.entitlements;
-				DEVELOPMENT_TEAM = JBKZ5A8R37;
+				DEVELOPMENT_TEAM = Z6KXG7589J;
 				INFOPLIST_FILE = CompanyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

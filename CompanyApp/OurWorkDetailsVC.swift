@@ -44,6 +44,18 @@ class OurWorkDetailsVC: UIViewController {
         
     }
     
+    @IBAction func LocationPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toLocationVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toLocationVC" {
+            let vc = segue.destination as? LocationVC
+            vc?.Work = self.work
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
