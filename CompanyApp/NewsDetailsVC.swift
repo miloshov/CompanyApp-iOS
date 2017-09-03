@@ -38,6 +38,7 @@ class NewsDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageLbl.isHidden = true
+        textLbl.isEditable = false
         
         titleLbl.text = news.name
         textLbl.text = news.details

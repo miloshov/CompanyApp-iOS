@@ -61,6 +61,7 @@ class OurWorkDetailsVC: UIViewController {
         
         latitudeLbl.isHidden = true
         longitudeLbl.isHidden = true
+        textLbl.isEditable = false
         
         titleLbl.text = work.name
         dateLbl.text = work.date

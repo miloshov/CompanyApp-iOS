@@ -31,6 +31,7 @@ class NewOurWorkTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         self.tableView.isHidden = true
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         

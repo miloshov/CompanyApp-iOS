@@ -39,7 +39,7 @@ class LocationVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations[0]
+//        let location = locations[0]
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(Work.lat)!, Double(Work.lon)!)
         let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
