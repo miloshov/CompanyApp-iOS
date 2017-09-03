@@ -36,5 +36,7 @@
 	<string>1:349201255423:ios:75cc74a248821fba</string>
 	<key>DATABASE_URL</key>
 	<string>https://company-application-default.firebaseio.com</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 </dict>
 </plist>

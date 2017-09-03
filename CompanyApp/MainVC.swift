@@ -38,14 +38,8 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                    
-        Messaging.messaging().subscribe(toTopic: "/topics/news") // Calling push notifiaction subscription
+        Messaging.messaging().subscribe(toTopic: "/topics/news")
         
-    }
-    
-    
-    
-    
-    
+    }  
 }
 
